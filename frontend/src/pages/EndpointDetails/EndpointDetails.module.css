@@ -1,0 +1,11 @@
+.container { padding: 2rem; max-width: 1200px; margin: 0 auto; font-family: system-ui, sans-serif; }
+.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
+.titleGroup { display: flex; align-items: center; gap: 1rem; }
+.backBtn { background: none; border: none; padding: 0.5rem; cursor: pointer; color: #4b5563; border-radius: 6px; display: flex; align-items: center; }
+.backBtn:hover { background: #f3f4f6; color: #111827; }
+.header h1 { margin: 0; font-size: 1.5rem; color: #111827; }
+.subtitle { margin: 0; font-size: 0.875rem; color: #6b7280; font-family: monospace; }
+.refreshBtn { display: flex; align-items: center; gap: 0.5rem; background: white; border: 1px solid #d1d5db; padding: 0.5rem 1rem; border-radius: 6px; font-weight: 500; cursor: pointer; }
+.refreshBtn:hover { background: #f9fafb; }
+.spinning { animation: spin 1s linear infinite; }
+@keyframes spin { 100% { transform: rotate(360deg); } }
