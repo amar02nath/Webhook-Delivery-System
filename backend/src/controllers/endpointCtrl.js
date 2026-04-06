@@ -46,7 +46,7 @@ exports.updateEndpoint = async (req, res) => {
     const endpoint = await Endpoint.findByIdAndUpdate(
       req.params.id,
       { events },
-      { new: true }
+      { new: true },
     );
     res.status(200).json(endpoint);
   } catch (error) {

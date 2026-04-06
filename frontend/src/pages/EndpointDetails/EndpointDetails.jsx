@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { getEndpointLogs } from "../../services/api";
 import LogTable from "../../components/LogTable/LogTable";
 import { ArrowLeft, RefreshCw } from "lucide-react";
+import ThemeToggle from "../../components/ThemeToggle/ThemeToggle";
 import styles from "./EndpointDetails.module.css";
 
 const EndpointDetails = () => {
@@ -39,14 +40,17 @@ const EndpointDetails = () => {
             <p className={styles.subtitle}>ID: {id}</p>
           </div>
         </div>
-        <button
-          className={styles.refreshBtn}
-          onClick={fetchLogs}
-          disabled={loading}
-        >
-          <RefreshCw size={16} className={loading ? styles.spinning : ""} />
-          Refresh Logs
-        </button>
+        <div className={styles.actions}>
+          <button
+            className={styles.refreshBtn}
+            onClick={fetchLogs}
+            disabled={loading}
+          >
+            <RefreshCw size={16} className={loading ? styles.spinning : ""} />
+            Refresh Logs
+          </button>
+          <ThemeToggle />
+        </div>
       </header>
 
       <main>

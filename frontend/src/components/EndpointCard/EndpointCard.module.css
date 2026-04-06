@@ -1,6 +1,6 @@
 .card {
-    background: white;
-    border: 1px solid #e5e7eb;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 1.5rem;
     cursor: pointer;
@@ -8,7 +8,8 @@
 }
 .card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+    border-color: var(--color-primary);
 }
 .header {
     display: flex;
@@ -20,7 +21,7 @@
     margin: 0;
     font-size: 1.1rem;
     font-weight: 600;
-    color: #111827;
+    color: var(--text-primary);
     word-break: break-all;
     padding-right: 1rem;
 }
@@ -34,19 +35,20 @@
     font-weight: 500;
     text-transform: capitalize;
 }
-.healthy { color: #166534; background-color: #dcfce7; }
-.degraded { color: #854d0e; background-color: #fef08a; }
-.failing { color: #991b1b; background-color: #fee2e2; }
+.healthy { color: var(--badge-success-text); background-color: var(--badge-success-bg); border: 1px solid var(--badge-success-text); }
+.degraded { color: var(--badge-pending-text); background-color: var(--badge-pending-bg); border: 1px solid var(--badge-pending-text); }
+.failing { color: var(--badge-error-text); background-color: var(--badge-error-bg); border: 1px solid var(--badge-error-text); }
 
 .label {
     font-size: 0.875rem;
-    color: #6b7280;
+    color: var(--text-secondary);
     margin-bottom: 0.5rem;
 }
 .tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
 .tag {
-    background: #f3f4f6;
-    color: #374151;
+    background: var(--bg-body);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
     padding: 0.25rem 0.5rem;
     border-radius: 4px;
     font-size: 0.75rem;

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { getEndpoints, triggerEvent } from "../../services/api";
 import EndpointCard from "../../components/EndpointCard/EndpointCard";
 import AddEndpointModal from "../../components/AddEndpointModal/AddEndpointModal";
+import ThemeToggle from "../../components/ThemeToggle/ThemeToggle";
 import styles from "./Dashboard.module.css";
 
 const Dashboard = () => {
@@ -59,6 +60,7 @@ const Dashboard = () => {
           <button className={styles.primaryBtn} onClick={handleTriggerTest}>
             Trigger Test Event
           </button>
+          <ThemeToggle />
         </div>
       </header>
 
